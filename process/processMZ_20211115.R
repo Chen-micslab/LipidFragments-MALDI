@@ -7,19 +7,8 @@ source('lib/MassSpectraProcessor.R')
 mzDataDir <- '../data/spectra/MALDI-TOF'
 
 mzOrigFilenameList <- list(
-    c('2021-11-25/25DHB+SPCS-50%CHCl3-50%MeOH-20210908-MS2/0_E4/1/147.1000.LIFT/Spectrum.mzXML',
-      '2021-11-25/25DHB+SPCS-50%CHCl3-50%MeOH-20210908-MS2/0_E5/1/166.1000.LIFT/Spectrum.mzXML'),
-    c('2021-11-25/25DHB+SerumExtract-50%CHCl3-50%MeOH-20210908-MS2/0_D2/1/147.1000.LIFT/Spectrum.mzXML'),
-    c('2021-11-25/25DHB+SerumExtract-50%CHCl3-50%MeOH-20210908-MS2/0_D5/1/166.1000.LIFT/Spectrum.mzXML'),
-    c('2021-11-25/TiO2NP25+EtOH+NaCl-MS2/0_F4/1/125.0000.LIFT/Spectrum.mzXML',
-      '2021-11-25/TiO2NP25+EtOH+NaCl-MS2/0_F4/1/166.1000.LIFT/Spectrum.mzXML',
-      '2021-11-25/TiO2NP25+EtOH+NaCl-MS2/0_F4/1/184.1000.LIFT/Spectrum.mzXML'),
-    c('2021-11-25/TiO2NP25+NaCl+PC(18(0)-18(2))-MS2/0_F3/1/125.0000.LIFT/Spectrum.mzXML'),
-    c('2021-11-25/TiO2NP25+NaCl+PC(18(0)-18(2))-MS2/0_F1/1/184.1000.LIFT/Spectrum.mzXML'),
-    c('2021-11-25/TiO2NP25+SPCS-100%EtOH-20210908-MS2/0_F7/1/104.1000.LIFT/Spectrum.mzXML',
-      '2021-11-25/TiO2NP25+SPCS-100%EtOH-20210908-MS2/0_F10/1/184.1000.LIFT/Spectrum.mzXML'),
-    c('2021-11-25/TiO2NP25+SerumExtract-100%EtOH-20210908-MS2/0_G7/1/104.1000.LIFT/Spectrum.mzXML'),
-    c('2021-11-25/TiO2NP25+SerumExtract-100%EtOH-20210908-MS2/0_G10/1/184.1000.LIFT/Spectrum.mzXML')
+    c('2021-11-15/TiO2NP25+SPCS-100%EtOH-20210908-MS2/0_N14/1/198.1000.LIFT/Spectrum.mzXML'),
+    c('2021-11-15/TiO2NP25+SerumExtract-100%EtOH-20210908-MS2/0_P14/1/198.1000.LIFT/Spectrum.mzXML')
 )
 mzOrigFilenameList <- addParentDirectory(mzOrigFilenameList, mzDataDir)
 
@@ -31,14 +20,7 @@ mzPeakFilenameList2 <- changeFilenameSuffix(mzPeakFilenameList, '_noBG.csv', '.c
 
 mzBackgroundPeakFilenameList <- list(
     c(),
-    c('2021-11-25/25DHB+SPCS-50%CHCl3-50%MeOH-20210908-MS2/0_E4/1/147.1000.LIFT/Spectrum.mzXML'),
-    c('2021-11-25/25DHB+SPCS-50%CHCl3-50%MeOH-20210908-MS2/0_E5/1/166.1000.LIFT/Spectrum.mzXML'),
-    c(),
-    c('2021-11-25/TiO2NP25+EtOH+NaCl-MS2/0_F4/1/125.0000.LIFT/Spectrum.mzXML'),
-    c('2021-11-25/TiO2NP25+EtOH+NaCl-MS2/0_F4/1/184.1000.LIFT/Spectrum.mzXML'),
-    c(),
-    c('2021-11-25/TiO2NP25+SPCS-100%EtOH-20210908-MS2/0_F7/1/104.1000.LIFT/Spectrum.mzXML'),
-    c('2021-11-25/TiO2NP25+SPCS-100%EtOH-20210908-MS2/0_F10/1/184.1000.LIFT/Spectrum.mzXML')
+    c('2021-11-15/TiO2NP25+SPCS-100%EtOH-20210908-MS2/0_N14/1/198.1000.LIFT/Spectrum.mzXML')
 )
 mzBackgroundPeakFilenameList <- 
             changeFilenameSuffix(mzBackgroundPeakFilenameList, 
@@ -48,7 +30,7 @@ mzBackgroundPeakFilenameList <-
 
 
 mzRanges <- list(
-    c(20, 1000)  # MS/MS
+    c(20, 1000)  # General
 )
 
 mzPeakSNR <- 3  # General
@@ -56,7 +38,7 @@ mzPeakMaxWidth <- 0.2  # General
 
 mzPeakTolerance <- 0.1  # General
 mzPeakRelativeTolerance <- FALSE  # General
-mzPeakMinimumReplicate <- 1  # MS/MS
+mzPeakMinimumReplicate <- 1
 
 
 ### MAIN ENTRY ###
