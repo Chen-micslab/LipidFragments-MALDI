@@ -6,7 +6,7 @@ This is a collection of R scripts used for processing mass spectra generated alo
 
 Four directories are included in this collection: 
 
-- "lib": collections of utility functions that are used by other scripts
+- "lib": collections of utility functions that are used by other scripts (adapted from the [RealMass](https://github.com/zwpwjwtz/RealMass) project)
 
 - "process": scripts for pre-process (e.g. format conversion) and process (e.g. smoothing and peak picking) of raw mass spectra
 
