@@ -2,13 +2,13 @@
 
 ## Introduction
 
-This is a collection of R scripts used for processing mass spectra generated along the research **"Uncover the interference of lipid fragments in MALDI-TOF analysis of serum metabolites using nanoparticle matrix"**.
+This is a collection of R scripts used for processing mass spectra generated along the research **"Uncover the Interference of Lipid Fragments on the Qualification and Quantification of Serum Metabolites in MALDI-TOF MS Analysis"**.
 
 Four directories are included in this collection: 
 
 - "lib": collections of utility functions that are used by other scripts (adapted from the [RealMass](https://github.com/zwpwjwtz/RealMass) project)
 
-- "process": scripts for pre-process (e.g. format conversion) and process (e.g. smoothing and peak picking) of raw mass spectra
+- "process": scripts for processing (e.g. smoothing and peak picking) raw mass spectra
 
 - "summary": scripts that summarize (e.g. cluster and average) processed spectra and peak lists, and generate averaged peak list among replicates of spectra
 
@@ -21,6 +21,29 @@ Four directories are included in this collection:
 Since the scripts use relative path to reference each other, it is advised to keep the structure of directory unchanged.
 
 We also assumed that the current working directory (check it with ```getwd()``` in R) is the root directory of this collection. It is then advised to set the working directory (using ```setwd()```) to the root of this collection before run any script.
+
+### Source data
+
+Source data can be found on [iProx](http://www.iprox.org/page/project.html?id=IPX0003892000). Please extract the downloaded archives into a subdirectory named "spectra", under a directory named "data" alongside the project root, so that processing scripts will find them. Two additional subdirectories under the "data" directory, named "summary" and "plot", will be necessary if further statistics and plotting are required. The final directory structure is expected as follows:
+
+```
+-- (upper level directory)
+	|-- data
+	|	|-- plot
+	|	|-- summary
+	|	|-- spectra
+	|		|-- MALDI-TOF
+	|		|	|-- 2021-09-10
+	|		|	|-- (other subdirectories)
+	|		|-- HPLC-MS
+	|			|-- 20210917
+	|			|-- (other subdirectories)
+	|-- scripts (the project root)
+		|-- lib
+		|-- plot
+		|-- process
+		|-- summary
+```
 
 ###  Dependencies
 
