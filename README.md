@@ -30,20 +30,24 @@ Source data can be found on [iProx](http://www.iprox.org/page/project.html?id=IP
 -- (upper level directory)
 	|-- data
 	|	|-- plot
-	|	|-- summary
 	|	|-- spectra
+	|	|	|-- MALDI-TOF
+	|	|	|	|-- 2021-09-10
+	|	|	|	|-- (other subdirectories)
+	|	|	|-- HPLC-MS
+	|	|		|-- 20210917
+	|	|		|-- (other subdirectories)
+	|	|-- summary
 	|		|-- MALDI-TOF
-	|		|	|-- 2021-09-10
-	|		|	|-- (other subdirectories)
 	|		|-- HPLC-MS
-	|			|-- 20210917
-	|			|-- (other subdirectories)
 	|-- scripts (the project root)
 		|-- lib
 		|-- plot
 		|-- process
 		|-- summary
 ```
+
+Alternatively, you may use the [init](./init.sh) script provided in this project to create the above directories for you.
 
 ###  Dependencies
 
@@ -59,7 +63,7 @@ Packages of other versions might also work, but without guarantee.
 
 ### Have an overview
 
-A demo script that demonstrate the basic workflow of metabolite quantification can be found at [main.R](./main.R). You can may also choose to run scripts dedicating to a specific step, but be sure that the input data of that step has been generated before (e.g. peak lists must be generated before metabolite quantification can be made).
+A demo script that demonstrate the basic workflow of metabolite quantification can be found at [main.R](./main.R). You may also choose to run scripts dedicating to a specific step, but be sure that the input data of that step has been generated before (e.g. peak lists must be generated before metabolite quantification can be made).
 
 ### Process mass spectra
 
