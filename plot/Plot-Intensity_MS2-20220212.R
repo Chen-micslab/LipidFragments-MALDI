@@ -11,12 +11,14 @@ mzDataDir <- '../data/spectra/MALDI-TOF'
 mzPlotDir <- '../data/plot'
 
 mzSpectrumFilenameList <- list(
-    c('2021-11-27/TiO2NP25+NaCl+PC(18(0)-18(2))-MS2/0_B14/1/104.1000.LIFT/Spectrum_processed.rds'),
-    c('2021-11-25/TiO2NP25+NaCl+PC(18(0)-18(2))-MS2/0_F3/1/125.0000.LIFT/Spectrum_processed.rds'),
-    c('2021-12-21/TiO2NP25+NaCl+PC(18(0)-18(2))-MS2/0_B2/1/147.0000.LIFT/Spectrum_processed.rds'),
-    c('2021-11-27/TiO2NP25+NaCl+PC(18(0)-18(2))-MS2/0_B13/1/166.1000.LIFT/Spectrum_processed.rds'),
-    c('2021-11-25/TiO2NP25+NaCl+PC(18(0)-18(2))-MS2/0_F1/1/184.1000.LIFT/Spectrum_processed.rds'),
-    c('2021-11-24/TiO2NP25+NaCl+PC(18(0)-18(2))-MS2/0_E1/1/198.1000.LIFT/Spectrum_processed.rds')
+    c('2022-02-11/TiO2NP25+NaCl+PC(18(1)-18(1))-MS2/0_M2/1/104.1000.LIFT/Spectrum_processed.rds',
+      '2021-11-25/TiO2NP25+SerumExtract-100%EtOH-20210908-MS2/0_G7/1/104.1000.LIFT/Spectrum_processed.rds'),
+    c('2022-02-12/TiO2NP25+NaCl+PC(18(1)-18(1))-MS2/0_B7/1/147.0000.LIFT/Spectrum_processed.rds',
+      '2021-12-21/TiO2NP25+SerumExtract-100%EtOH-20210908-MS2/0_E22/1/147.0000.LIFT/Spectrum_processed.rds'),
+    c('2022-02-10/TiO2NP25+NaCl+PC(18(1)-18(1))-MS2/0_K4/1/184.1000.LIFT/Spectrum_processed.rds',
+      '2021-11-25/TiO2NP25+SerumExtract-100%EtOH-20210908-MS2/0_G10/1/184.1000.LIFT/Spectrum_processed.rds'),
+    c('2022-02-10/TiO2NP25+NaCl+PC(18(1)-18(1))-MS2/0_K5/1/198.1000.LIFT/Spectrum_processed.rds',
+      '2021-11-15/TiO2NP25+SerumExtract-100%EtOH-20210908-MS2/0_P14/1/198.1000.LIFT/Spectrum_processed.rds')
 )        
 mzSpectrumFilenameList <- addParentDirectory(mzSpectrumFilenameList, mzDataDir)
 
@@ -24,55 +26,55 @@ mzPeakFileNameList <- changeFilenameSuffix(mzSpectrumFilenameList,
                                            '-peaks.csv', '.rds')
 
 mzBackgroundPeakFilenameList <- list(
-    c('2021-11-27/TiO2NP25+EtOH+NaCl-MS2/0_A14/1/104.1000.LIFT/Spectrum_processed-peaks.csv'),
-    c('2021-11-25/TiO2NP25+EtOH+NaCl-MS2/0_F4/1/125.0000.LIFT/Spectrum_processed-peaks.csv'),
-    c('2021-12-21/TiO2NP25+EtOH+NaCl-MS2/0_C3/1/147.0000.LIFT/Spectrum_processed-peaks.csv'),
-    c('2021-11-25/TiO2NP25+EtOH+NaCl-MS2/0_F4/1/166.1000.LIFT/Spectrum_processed-peaks.csv'),
-    c('2021-11-25/TiO2NP25+EtOH+NaCl-MS2/0_F4/1/184.1000.LIFT/Spectrum_processed-peaks.csv'),
-    c('2021-11-24/TiO2NP25+EtOH+NaCl-MS2/0_D5/1/198.1000.LIFT/Spectrum_processed-peaks.csv')
+    c('2022-02-11/TiO2NP25+EtOH+NaCl-MS2/0_O1/1/104.1000.LIFT/Spectrum_processed-peaks.csv',
+      '2021-11-25/TiO2NP25+SPCS-100%EtOH-20210908-MS2/0_F7/1/104.1000.LIFT/Spectrum_processed-peaks.csv'),
+    c('2022-02-12/TiO2NP25+EtOH+NaCl-MS2/0_A7/1/147.0000.LIFT/Spectrum_processed-peaks.csv',
+      '2021-12-21/TiO2NP25+SPCS-100%EtOH-20210908-MS2/0_D22/1/147.0000.LIFT/Spectrum_processed-peaks.csv'),
+    c('2022-02-10/TiO2NP25+EtOH+NaCl-MS2/0_J4/1/184.1000.LIFT/Spectrum_processed-peaks.csv',
+      '2021-11-25/TiO2NP25+SPCS-100%EtOH-20210908-MS2/0_F10/1/184.1000.LIFT/Spectrum_processed-peaks.csv'),
+    c('2022-02-10/TiO2NP25+EtOH+NaCl-MS2/0_J5/1/198.1000.LIFT/Spectrum_processed-peaks.csv',
+      '2021-11-15/TiO2NP25+SPCS-100%EtOH-20210908-MS2/0_N14/1/198.1000.LIFT/Spectrum_processed-peaks.csv')
 )
 mzBackgroundPeakFilenameList <- addParentDirectory(mzBackgroundPeakFilenameList, mzDataDir)
 
-mzPlotFilename <- 'TiO2NP25+PC(18(0)-18(2))-MS2.png'
+mzPlotFilename <- 'TiO2NP25+PC(18-18)+SE1-MS2.png'
 mzPlotFilename <- addParentDirectory(mzPlotFilename, mzPlotDir)
 
 mzSpectrumNameList <- list(
-    'A', 'B', 'C', 'D', 'E', 'F'
+    c('A', ''), c('B', ''), c('C', ''), c('D', '')
 )
 
 mzRange <- c(20, 1000)
 
 mzPeakResolution <- 5e-5  # Average resolution of the detector (MS2 at m/z = 200)
-mzPeakTolerance <- 0.1
+mzPeakTolerance <- 0.15
 mzRelativePeakTolerance <- FALSE
 
-mzPlotDimensionX <- 2
-mzPlotDimensionY <- 3  # PC(18-18)
+mzPlotDimensionX <- 4
+mzPlotDimensionY <- 1
 mzPlotSubDimensionX <- 1
-mzPlotSubDimensionY <- 1
+mzPlotSubDimensionY <- 2
 mzPlotDirection <- 'v'
 
 mzPlotType <- c(
-    rep('h', 6)  # PC(18-18)
+    rep('h', 4)
 )
 
-# mzPlotLabelAxisX <- expression(italic('m') * '/' * italic('z'))
 mzPlotLabelAxisX <- ''
-# mzPlotLabelAxisY <- 'Relative Intensity (%)'
+# mzPlotLabelAxisX <- expression(italic('m') * '/' * italic('z'))
 mzPlotLabelAxisY <- ''
+# mzPlotLabelAxisY <- 'Relative Intensity (%)'
 
 mzPlotRangeListX <- list(
-    c(20, 100),  # PC(18-18), m/z 104
-    c(20, 120),  # PC(18-18), m/z 125
-    c(20, 140),  # PC(18-18), m/z 147
-    c(20, 160),  # PC(18-18), m/z 166
-    c(20, 180),  # PC(18-18), m/z 184
-    c(20, 195)  # PC(18-18), m/z 198
+    c(20, 100),  # m/z 104
+    c(20, 140),  # m/z 147
+    c(20, 180),  # m/z 184
+    c(20, 195)  # m/z 198
 )
-mzPlotRangeY <- c(0, 1.2)
+mzPlotRangeY <- c(0, 1.1)
+# mzPlotRangeY <- c(0, 0.2)
 
 mzPlotAxisTickX <- NULL
-mzPlotAxisTickY <- seq(0, 1, 0.25)
 
 mzPlotLineSize <- 1
 mzPlotFontSize <- 100
@@ -80,7 +82,7 @@ mzPlotFontSizeTitle <- 40
 mzPlotFontSizeAxisLabel <- 60
 mzPlotFontSizeAnnotation <- 12
 
-mzPlotLineColorList <- c(rep(list('#5F0000'), 6))
+mzPlotLineColorList <- c(rep(list(c('#00A0FF', '#5F0000')), 4))
 mzPlotAnnotationColor <- '#000000'
 
 mzPlotAnnotationText <- '○'
@@ -95,7 +97,7 @@ mzPlotAnnotationPos <- function(X)
 }
 
 mzPlotDevice <- png
-mzPlotResolution <- c(3900, 2000)  # PC(18-18)
+mzPlotResolution <- c(4800, 1900)
 
 
 ### MAIN ENTRY ###
@@ -181,6 +183,15 @@ for (i in seq(1, length(mzDataList)))
     colnames(plotAnnotationData) <- c('x', 'y', 'id')
     
     # Plot figures
+    plotScale <- c()
+    if (!all(is.na(mzPlotRangeListX[[i]])))
+        plotScale <- 'free_y'
+    if (!all(is.na(mzPlotRangeY)))
+        plotScale <- c(plotScale, 'free_x')
+    if (length(plotScale) == 0)
+        plotScale <- 'free'
+    if (length(plotScale) > 1)
+        plotScale <- 'fixed'
     p <- ggplot(plotData, aes(x = mz, y = intensity, group = id))
     if (mzPlotType[i] == 'h')
         p <- p + geom_histogram(aes(color = as.factor(id)), stat = 'identity', 
@@ -191,18 +202,8 @@ for (i in seq(1, length(mzDataList)))
                            show.legend = FALSE)
     if (!is.null(mzPlotAxisTickX))
         p <- p + scale_x_continuous(breaks = mzPlotAxisTickX)
-    plotScale <- c()
-    if (!all(is.na(mzPlotRangeListX[[i]])))
-        plotScale <- 'free_y'
-    if (!all(is.na(mzPlotRangeY)))
-        plotScale <- c(plotScale, 'free_x')
-    if (length(plotScale) == 0)
-        plotScale <- 'free'
-    if (length(plotScale) > 1)
-        plotScale <- 'fixed'
     p <- p + 
-        scale_y_continuous(breaks = mzPlotAxisTickY,
-                           labels = function(X)
+        scale_y_continuous(labels = function(X)
                            { formatC(X * 100, digits = 0, format = 'f') }) +
         scale_color_manual(values = mzPlotLineColorList[[i]]) + 
         facet_wrap(~id, nrow = mzPlotSubDimensionY, ncol = mzPlotSubDimensionX,
@@ -232,14 +233,14 @@ for (i in seq(1, length(mzDataList)))
               axis.ticks.length = unit(mzPlotFontSizeAxisLabel / 2, 'point'),
               panel.spacing.y = unit(0, 'line'),
               # plot.margin = margin(t = 2, r = 4, b = 2, l = 2, unit = 'line')
-              plot.margin = margin(t = 1, r = 5, b = -4, l = -8, unit = 'line')
+              plot.margin = margin(t = 0, r = 4, b = 0, l = -4, unit = 'line')
         )
     p <- p + 
         xlab(mzPlotLabelAxisX) + ylab(mzPlotLabelAxisY)
     
     # Add title for subplots
     plotText <- data.frame(x = -Inf, y = Inf,
-                           hjust = -1.1, vjust = 1.5,
+                           hjust = -0.8, vjust = 2.5,
                            label = mzSpectrumNameList[[i]],
                            id = unique(plotData$id))
     p <- p + geom_text(plotText, 

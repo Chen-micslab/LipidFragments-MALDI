@@ -11,12 +11,12 @@ mzDataDir <- '../data/spectra/MALDI-TOF'
 mzPlotDir <- '../data/plot'
 
 mzSpectrumFilenameList <- list(
-    c('2021-11-27/TiO2NP25+NaCl+PC(18(0)-18(2))-MS2/0_B14/1/104.1000.LIFT/Spectrum_processed.rds'),
-    c('2021-11-25/TiO2NP25+NaCl+PC(18(0)-18(2))-MS2/0_F3/1/125.0000.LIFT/Spectrum_processed.rds'),
-    c('2021-12-21/TiO2NP25+NaCl+PC(18(0)-18(2))-MS2/0_B2/1/147.0000.LIFT/Spectrum_processed.rds'),
-    c('2021-11-27/TiO2NP25+NaCl+PC(18(0)-18(2))-MS2/0_B13/1/166.1000.LIFT/Spectrum_processed.rds'),
-    c('2021-11-25/TiO2NP25+NaCl+PC(18(0)-18(2))-MS2/0_F1/1/184.1000.LIFT/Spectrum_processed.rds'),
-    c('2021-11-24/TiO2NP25+NaCl+PC(18(0)-18(2))-MS2/0_E1/1/198.1000.LIFT/Spectrum_processed.rds')
+    c('2022-02-11/TiO2NP25+NaCl+PC(18(1)-18(1))-MS2/0_M2/1/104.1000.LIFT/Spectrum_processed.rds'),
+    c('2022-02-11/TiO2NP25+NaCl+PC(18(1)-18(1))-MS2/0_M1/1/125.0000.LIFT/Spectrum_processed.rds'),
+    c('2022-02-12/TiO2NP25+NaCl+PC(18(1)-18(1))-MS2/0_B7/1/147.0000.LIFT/Spectrum_processed.rds'),
+    c('2022-02-12/TiO2NP25+NaCl+PC(18(1)-18(1))-MS2/0_B11/1/166.1000.LIFT/Spectrum_processed.rds'),
+    c('2022-02-10/TiO2NP25+NaCl+PC(18(1)-18(1))-MS2/0_K4/1/184.1000.LIFT/Spectrum_processed.rds'),
+    c('2022-02-10/TiO2NP25+NaCl+PC(18(1)-18(1))-MS2/0_K5/1/198.1000.LIFT/Spectrum_processed.rds')
 )        
 mzSpectrumFilenameList <- addParentDirectory(mzSpectrumFilenameList, mzDataDir)
 
@@ -24,16 +24,16 @@ mzPeakFileNameList <- changeFilenameSuffix(mzSpectrumFilenameList,
                                            '-peaks.csv', '.rds')
 
 mzBackgroundPeakFilenameList <- list(
-    c('2021-11-27/TiO2NP25+EtOH+NaCl-MS2/0_A14/1/104.1000.LIFT/Spectrum_processed-peaks.csv'),
-    c('2021-11-25/TiO2NP25+EtOH+NaCl-MS2/0_F4/1/125.0000.LIFT/Spectrum_processed-peaks.csv'),
-    c('2021-12-21/TiO2NP25+EtOH+NaCl-MS2/0_C3/1/147.0000.LIFT/Spectrum_processed-peaks.csv'),
-    c('2021-11-25/TiO2NP25+EtOH+NaCl-MS2/0_F4/1/166.1000.LIFT/Spectrum_processed-peaks.csv'),
-    c('2021-11-25/TiO2NP25+EtOH+NaCl-MS2/0_F4/1/184.1000.LIFT/Spectrum_processed-peaks.csv'),
-    c('2021-11-24/TiO2NP25+EtOH+NaCl-MS2/0_D5/1/198.1000.LIFT/Spectrum_processed-peaks.csv')
+    c('2022-02-11/TiO2NP25+EtOH+NaCl-MS2/0_O1/1/104.1000.LIFT/Spectrum_processed-peaks.csv'),
+    c('2022-02-11/TiO2NP25+EtOH+NaCl-MS2/0_O2/1/125.0000.LIFT/Spectrum_processed-peaks.csv'),
+    c('2022-02-12/TiO2NP25+EtOH+NaCl-MS2/0_A7/1/147.0000.LIFT/Spectrum_processed-peaks.csv'),
+    c('2022-02-12/TiO2NP25+EtOH+NaCl-MS2/0_A8/1/166.1000.LIFT/Spectrum_processed-peaks.csv'),
+    c('2022-02-10/TiO2NP25+EtOH+NaCl-MS2/0_J4/1/184.1000.LIFT/Spectrum_processed-peaks.csv'),
+    c('2022-02-10/TiO2NP25+EtOH+NaCl-MS2/0_J5/1/198.1000.LIFT/Spectrum_processed-peaks.csv')
 )
 mzBackgroundPeakFilenameList <- addParentDirectory(mzBackgroundPeakFilenameList, mzDataDir)
 
-mzPlotFilename <- 'TiO2NP25+PC(18(0)-18(2))-MS2.png'
+mzPlotFilename <- 'TiO2NP25+PC(18-18)-MS2.png'
 mzPlotFilename <- addParentDirectory(mzPlotFilename, mzPlotDir)
 
 mzSpectrumNameList <- list(
